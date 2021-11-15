@@ -22,7 +22,7 @@ test("Should render <a> tag", () => {
   expect(container.querySelector("a")).toBeInTheDocument();
 });
 
-test("Should render <Link> tag", () => {
+test("Should render <Link> Tag", () => {
   const { container } = render(
     <Router>
       <Button type="link"></Button>
