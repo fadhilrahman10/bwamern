@@ -6,6 +6,7 @@ import Categories from "parts/Categories";
 import Testimony from "parts/Testimony";
 import Footer from "parts/Footer";
 import landingPage from "json/landingPage.json";
+import Fade from "react-reveal/Fade";
 
 export default class LandingPage extends Component {
   constructor(props) {
@@ -16,14 +17,20 @@ export default class LandingPage extends Component {
   render() {
     return (
       <>
-        <Header {...this.props}></Header>
-        <Hero refMostPicked={this.refMostPicked} data={landingPage.hero} />
+        <Fade>
+          <Header {...this.props}></Header>
+        </Fade>
+        <Fade bottom>
+          <Hero refMostPicked={this.refMostPicked} data={landingPage.hero} />
+        </Fade>
         <MostPicked
           refMostPicked={this.refMostPicked}
           data={landingPage.mostPicked}
         />
         <Categories data={landingPage.categories} />
-        <Testimony data={landingPage.testimonial} />
+        <Fade bottom>
+          <Testimony data={landingPage.testimonial} />
+        </Fade>
         <Footer />
       </>
     );
