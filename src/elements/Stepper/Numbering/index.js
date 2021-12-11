@@ -8,7 +8,6 @@ import "./index.scss";
 
 export default function Numbering({ style, className, data, current }) {
   const KeysOfData = Object.keys(data);
-
   return (
     <Fade>
       <ol className={["stepper", className].join(" ")} style={style}>
@@ -18,6 +17,7 @@ export default function Numbering({ style, className, data, current }) {
             isActive = "";
             return null;
           }
+
           return (
             <li key={`list-${index}`} className={[isActive].join(" ")}>
               {index + 1}
@@ -33,4 +33,5 @@ Numbering.propTypes = {
   className: propTypes.string,
   data: propTypes.object,
   current: propTypes.string,
+  // style: propTypes.string,
 };
