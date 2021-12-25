@@ -85,7 +85,6 @@ export default class Checkout extends Component {
     return (
       <>
         <Header isCentered />
-
         <Stepper steps={steps}>
           {(prevStep, nextStep, CurrentStep, steps) => (
             <>
