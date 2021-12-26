@@ -1,8 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-
-// import registerServiceWorker from "./react-service-worker";
-
 import "assets/scss/style.scss";
 import LandingPage from "pages/LandingPage";
 import DetailsPage from "pages/DetailsPage";
@@ -23,4 +20,3 @@ function App() {
 }
 
 export default App;
-// serviceWorker.unregister();
